@@ -1,12 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log(`Bot is Online!`);
-  bot.user.setGame(".help | Bot By NiceGames");
+  client.user.setGame(".help | Bot By NiceGames");
 });
 
-bot.on("message", async message => {
+client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
